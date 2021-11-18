@@ -1,0 +1,55 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+          
+  - name: stg_superheroes
+    description: "Demographics about each superhero such as name, hair color, height and weight."
+    columns:
+      - name: name
+        tests:
+          - not_null
+      - name: height
+        tests:
+          - positive_values
+      - name: weight
+        tests:
+          - positive_values
+
+  - name: stg_addresses
+    description: "Contains address information"
+
+  - name: stg_events
+    description: "Contains information about each event" 
+
+  - name: stg_order_items
+    description: "Contains information about order_items"
+
+  - name: stg_orders
+    description: "Contains information about each order"
+
+  - name: stg_products
+    description: "Contains information about each product"
+
+  - name: stg_promos
+    description: "Contains information about each promo"
+
+  - name: stg_users
+    description: "Contains information about each user"
