@@ -3,10 +3,10 @@
   {{
     config(
       target_schema='snapshots',
-      unique_key='id',
+      unique_key='promo_id',
 
-      strategy='timestamp',
-      updated_at='updated_at'
+      strategy='check',
+      check_cols=['id', 'promo_id', 'discout', 'status']
     )
   }}
 
