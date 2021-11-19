@@ -6,7 +6,7 @@
       unique_key='product_id',
 
       strategy='check',
-      check_cols='updated_at'
+      check_cols=['id', 'product_id', 'name', 'price', 'quantity']
     )
   }}
 
