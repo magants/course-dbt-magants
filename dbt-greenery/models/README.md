@@ -9,9 +9,12 @@ Week 1 answers..
 
     * On average, how many orders do we receive per hour?
 
-    * On average, how long does an order take from being placed to being delivered?
+    * On average, how long does an order take from being placed to being delivered? 3 days, 22 hrs, 13 mins & 10 secs
 
-    * How many users have only made one purchase? Two purchases? Three+ purchases? 1-25, 2-22, >=3-81
+        select avg(delivered_at-created_at) from orders
+
+    * How many users have only made one purchase? Two purchases? Three
+    + purchases? 1-25, 2-22, >=3-81
 
         select count(order_id), user_id
         from orders
