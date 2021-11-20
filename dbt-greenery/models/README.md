@@ -4,15 +4,19 @@ Week 1 answers..
 2. Tag both code review partners..
 
 3;
-    * How many users do we have? 
-        select count(distinct(user_id)) FROM users - 130
+    * How many users do we have? 130
+        select count(distinct(user_id)) FROM users 
 
     * On average, how many orders do we receive per hour?
 
     * On average, how long does an order take from being placed to being delivered?
 
-    * How many users have only made one purchase? Two purchases? Three+ purchases?
-        select count(distinct user_id) from stg_orders
+    * How many users have only made one purchase? Two purchases? Three+ purchases? 1-25, 2-22, >=3-81
+
+        select count(order_id), user_id
+        from orders
+        group by user_id
+        having count(order_id)=:Number_of_purchases
 
     * On average, how many unique sessions do we have per hour?
 
