@@ -10,3 +10,4 @@ ports:
 vscode:
   extensions:
     - cweijan.vscode-database-client2
+    - mtxr.sqltools-driver-pg
