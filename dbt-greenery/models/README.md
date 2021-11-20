@@ -7,7 +7,17 @@ Week 1 answers..
     * How many users do we have? 130
         select count(distinct(user_id)) FROM users 
 
-    * On average, how many orders do we receive per hour?
+    * On average, how many orders do we receive per hour? 8.51
+
+        with order_time_lapse AS
+        (
+        select count(order_id) order_count,
+        max(created_at) - min(created_at) max_min
+        from orders
+        )
+
+        select order_count / (extract(hour from max_min) + (extract(day from max_min)*24)) orders_per_hour
+        from order_time_lapse
 
     * On average, how long does an order take from being placed to being delivered? 3 days, 22 hrs, 13 mins & 10 secs
 
@@ -33,12 +43,3 @@ Week 1 answers..
 
     select count / (extract(hour from max_min)+(extract(day from max_min)*24))
     from session_time_lapse
-
- 
-Self review questions;
-
-Were you able to create schema.yml files with model names and descriptions? Y
-Were you able to run your dbt models and snapshots against the data warehouse? Y
-Could you run the queries to answer key questions from the project instructions? Y
-What was most challenging/surprising in completing this week’s project? The Github piece was the most challenging. I am new to using Git..
-Is there anywhere you are still stuck or confused? Or Is there a particular part of the project where you want focused feedback from your reviewers? Not yet
