@@ -22,6 +22,17 @@ Week 1 answers..
         having count(order_id)=:Number_of_purchases
 
     * On average, how many unique sessions do we have per hour?
+    0.113956959775789366 - 1108 sessions in 405 days & 3 hours (9,723 hours)
+
+    with session_time_lapse AS
+    (
+    select count(distinct session_id) count,
+       max(created_at) - min(created_at) max_min
+    from events
+    )
+
+    select count / (extract(hour from max_min)+(extract(day from max_min)*24))
+    from session_time_lapse
 
  
 Self review questions;
