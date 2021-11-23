@@ -1,3 +1,5 @@
+--copied from esson, needs mods
+
 {{
   config(
     materialized='table'
