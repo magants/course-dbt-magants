@@ -1,4 +1,6 @@
-Week 1 answers..
+Week 2 answers;
+
+Week 1 answers;
 
 1. Post to #projects - GitHub repo - https://github.com/magants/course-dbt-magants
 2. Tag both code review partners..
