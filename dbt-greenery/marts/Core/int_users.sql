@@ -1,13 +1,29 @@
+    id,
+    user_id,
+    first_name,
+    last_name,
+    email,
+    phone_number,
+    created_at,
+    updated_at,
+    address_id
+FROM {{ source('tutorial', 'users') }}
+
+
+
 {{
   config(
     materialized='table'
   )
 }}
 
+    address_id
+
 SELECT
   u.user_id,
+  u.first_name ||' '||u.last_name as full_name,
   u.email,
-  u.full_name,
+  phone_number,
   p.status,
   --address
   CASE
