@@ -53,3 +53,8 @@ models:
 
   - name: stg_users
     description: "Contains information about each user"
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null

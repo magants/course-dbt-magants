@@ -1,4 +1,4 @@
---copied from esson, needs mods
+--copied from lesson, needs mods
 
 {{
   config(
