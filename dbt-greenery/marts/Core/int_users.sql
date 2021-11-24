@@ -12,4 +12,4 @@ SELECT
   a.address
 FROM {{ ref('stg_users') }} u
 LEFT JOIN {{ ref('stg_addresses') }} a
-  ON u.address_id = p.address_id
+  ON u.address_id = a.address_id
