@@ -4,7 +4,7 @@
 
 {{ config(materialized='table') }}
 
-WITH soure_data as (SELECT
+WITH soure_data as (
     
     SELECT count(order_id) AS order_count,
     user_id
