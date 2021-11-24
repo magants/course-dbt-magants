@@ -10,6 +10,7 @@ SELECT
   u.first_name,
   u.last_name,
   p.status,
+  --address
   CASE
     WHEN p.status = 1 THEN 'Inactive'
     WHEN p.status = 2 THEN 'Inactive'
@@ -21,5 +22,5 @@ SELECT
   END AS status_label,
   p.promo_id AS promo_id
 FROM {{ ref('stg_users') }} u
-LEFT JOIN {{ ref('stg_promos') }} p
+-- take out promosLEFT JOIN {{ ref('stg_promos') }} p
   ON u.id = p.id
