@@ -1,1 +1,0 @@
-select * from dbt_magants.orders_per_user
