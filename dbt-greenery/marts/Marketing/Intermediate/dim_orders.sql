@@ -1,1 +1,1 @@
-select * from dbt_magants.orders_per_users
+select * from dbt_magants.orders_per_user
