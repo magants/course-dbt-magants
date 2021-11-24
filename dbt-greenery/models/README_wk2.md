@@ -6,17 +6,12 @@ Week 2 answers;
 
 * What are good indicators of a user who will likely purchase again? What about indicators of users who are likely NOT to purchase again? If you had more data, what features would you want to look into to answer this question?
 
-    - NOTE: This is a hypothetical question vs. something we can analyze in our Greenery data set. Think about what exploratory analysis you would do to approach this question.
-
     - Indicators if a users will purchase again;
         * Already a repeat user
-        * 
+        * Whether they had a promo_id or not (1x purchases are more likely to have a promo_id)
+        * Initial order cost
 
-* More stakeholders are coming to us for data, which is great! But we need to get some more models created before we can help. Create a marts folder, so we can organize our models, with the following subfolders for business units:
-
-    -Core
-    -Marketing
-    -Product 
+    - If I had more data, I would like to know the quaility (freshness) of the item initially purchased.
 
 * Within each marts folder, create at least 1-2 intermediate models and 1-2 dimension/fact models.
 
