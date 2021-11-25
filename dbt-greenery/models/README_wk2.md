@@ -15,14 +15,11 @@ Week 2 answers;
 
 * Within each marts folder, create at least 1-2 intermediate models and 1-2 dimension/fact models.
 
-    -Note: think about what metrics might be particularly useful for these business units, and build dbt models using greenery’s data
-        -For example, some “core” datasets could include fact_orders, dim_products, and dim_users
-        -The marketing mart could contain a model like “user_order_facts” which contains order information at the user level
-        -The product mart could contain a model like “fact_page_views” which contains all page view events from greenery’s events data
+    * I only added models in the Core mart. Primariy b/c of time this short holiday week
 
 * Explain the marts models you added. Why did you organize the models in the way you did?
 
-    - Added dim_users which included the users' address and full name both from int_users
+    - I added dim_users which included the users' address and full name both from int_users. I also added fact_orders which pulled from int_fact_orders. This was the biggest model as it combined data from most of the source tables. I was a a bit confused as to why I really needed an int_fact_order as my fact_orders was a select * from int-fact_orders, but i created an int_fact_orders anyway.
 
 * Use the dbt docs to visualize your model DAGs to ensure the model layers make sense
     
