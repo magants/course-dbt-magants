@@ -22,6 +22,8 @@ Week 2 answers;
 
 * Explain the marts models you added. Why did you organize the models in the way you did?
 
+    - Added dim_users which included the users' address and full name both from int_users
+
 * Use the dbt docs to visualize your model DAGs to ensure the model layers make sense
     
     -Paste in an image of your DAG from the docs
