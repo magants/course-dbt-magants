@@ -19,7 +19,7 @@ o.order_id,
     p.quantity,
     pr.promo_id,
     pr.discout,
-    pr.status as promo_status
+    pr.status as promo_status,
     o.order_cost,
     o.shipping_cost,
     o.order_total,
