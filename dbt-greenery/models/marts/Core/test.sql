@@ -1,9 +1,3 @@
-{{
-  config(
-    materialized='table'
-  )
-}}
-
 SELECT
     o.order_id,
     oi.product_id,
@@ -19,9 +13,9 @@ SELECT
     o.delivered_at,
     o.status 
 FROM 
-{{ ref('stg_orders') }} o,
-{{ ref('stg_orders_items') }} oi,
-{{ ref('int_users') }} iu
+dbt_magants.stg_orders o,
+dbt_magants.stg_order_items oi,
+dbt_magants.int_users iu
 
 WHERE o.order_id = oi.order_id
 AND o.user_id = iu.user_id
