@@ -4,7 +4,6 @@
   )
 }}
 
-SELECT
  
  SELECT
   user_id,

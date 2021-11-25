@@ -11,3 +11,5 @@ SELECT
     first_order,
     last_order,
     user_name
+
+from {{ ref()}}
