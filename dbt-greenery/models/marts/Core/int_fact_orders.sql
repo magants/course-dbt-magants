@@ -19,7 +19,7 @@ o.order_id,
     p.quantity,
     pr.promo_id,
     pr.discout,
-    pr.status,
+    pr.status as promo_status
     o.order_cost,
     o.shipping_cost,
     o.order_total,
@@ -27,7 +27,7 @@ o.order_id,
     o.shipping_service,
     o.estimated_delivery_at,
     o.delivered_at,
-    o.status 
+    o.status as order_status
  
 FROM 
 {{ ref('stg_orders') }} o,
