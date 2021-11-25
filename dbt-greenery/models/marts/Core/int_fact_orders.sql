@@ -35,7 +35,7 @@ FROM
 {{ ref('int_users') }} iu,
 {{ ref('stg_addresses') }} a,
 {{ ref('stg_products') }} p,
-{{ ref('stg_promos') }} p
+{{ ref('stg_promos') }} pr
 
 WHERE o.order_id = oi.order_id
 AND o.user_id = iu.user_id
