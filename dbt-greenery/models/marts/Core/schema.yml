@@ -18,4 +18,8 @@ models:
       - name: order_id
         tests:
           - not_null
+      - name: promo_id
+        tests:
+          - accepted_values:['task-force', 'instruction', 'leverage', 'Optional', 'Mandatory', 'Digitized']
+
     

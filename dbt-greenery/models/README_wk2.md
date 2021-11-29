@@ -31,7 +31,7 @@ Week 2 answers;
 
     -What assumptions are you making about each model? (i.e. why are you adding each test?)
 
-    * I'm assuming there can be no duplicates for user_id in my dim_users. I added a bespoke test to make sure.
+    * I'm assuming there can be no duplicates for user_id in my dim_users. I added a bespoke test to make sure. I also added a bespoke test to make sure there were no order_costs < 1, which i assume would be a red flag if there were. I added a generic tests to make sure that ethere weren't any null order_ids, or unacceptable prmo_ids.
 
     -Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
 
