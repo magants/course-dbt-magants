@@ -31,6 +31,8 @@ Week 2 answers;
 
     -What assumptions are you making about each model? (i.e. why are you adding each test?)
 
+    * I'm assuming there can be no duplicates for user_id in my dim_users. I added a test to make sure
+
     -Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
 
     -Apply these changes to your github repo
