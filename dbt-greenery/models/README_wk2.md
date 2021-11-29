@@ -33,8 +33,10 @@ Week 2 answers;
 
     * I'm assuming there can be no duplicates for user_id in my dim_users. I added a bespoke test to make sure. I also added a bespoke test to make sure there were no order_costs < 1, which i assume would be a red flag if there were. I added a generic tests to make sure that ethere weren't any null order_ids, or unacceptable prmo_ids.
 
-    -Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
+    -Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests? None found, but I imagine if I had time to create more test i would find some.
 
     -Apply these changes to your github repo
 
 * Your stakeholders at Greenery want to understand the state of the data each day. Explain how you would ensure these tests are passing regularly and how you would alert stakeholders about bad data getting through.
+
+    * I would schedule the tests to run every morning after the scheduled dbt run to create the models. I read somewhere that with the new dbt release you can have 'dbt run' fail/stop if a test fails? This would be one way to ensure no bad data situations happen, although it seems pretty strict. 
