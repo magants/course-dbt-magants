@@ -2,9 +2,20 @@
 version: 2
 
 models:
+  
   - name: int_users
     description: "Intermediate users model"
-
+   
   - name: dim_users
     description: "Users dimension model"
+
+  - name: int_fact_orders
+    description: "Intermediate fact_order model"
+
+  - name: fact_orders
+    description: "fact_order fact model"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
     
