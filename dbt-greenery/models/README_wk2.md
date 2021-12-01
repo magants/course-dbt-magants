@@ -15,7 +15,7 @@ Week 2 answers;
 
 * Within each marts folder, create at least 1-2 intermediate models and 1-2 dimension/fact models.
 
-    * I only added models in the Core mart. Primariy b/c of time this short holiday week
+    * I added models in the Core and Products marts only. Primariy b/c of time this short holiday week.
 
 * Explain the marts models you added. Why did you organize the models in the way you did?
 
