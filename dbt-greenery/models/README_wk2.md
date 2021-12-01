@@ -19,7 +19,7 @@ Week 2 answers;
 
 * Explain the marts models you added. Why did you organize the models in the way you did?
 
-    - I added dim_users which included the users' address and full name both from int_users. I also added fact_orders which pulled from int_fact_orders. This was the biggest model as it combined data from most of the source tables. I was a a bit confused as to why I really needed an int_fact_order as my fact_orders was a select * from int-fact_orders, but i created an int_fact_orders anyway. I also added a dim_products which gave ma a product_in_stock value which I could test against if < 10.
+    - I added dim_users which included the users' address and full name both from int_users. I also added fact_orders which pulled from int_fact_orders. This was the biggest model as it combined data from most of the source tables. I was a a bit confused as to why I really needed an int_fact_order as my fact_orders was a select * from int-fact_orders, but i created an int_fact_orders anyway. I also added a dim_products which gave ma a product_in_stock value which I could test against if < 10. Lastly, I went ahead and added a fact_users_orders which gave me a num_order by user.
 
 * Use the dbt docs to visualize your model DAGs to ensure the model layers make sense
     
