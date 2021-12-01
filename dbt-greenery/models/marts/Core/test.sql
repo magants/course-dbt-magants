@@ -1,2 +1,2 @@
 
-select * from dbt_magants.stg_promos
+select * from dbt_magants.fact_orders;
