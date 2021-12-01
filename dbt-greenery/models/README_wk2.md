@@ -19,7 +19,7 @@ Week 2 answers;
 
 * Explain the marts models you added. Why did you organize the models in the way you did?
 
-    - I added dim_users which included the users' address and full name both from int_users. I also added fact_orders which pulled from int_fact_orders. This was the biggest model as it combined data from most of the source tables. I was a a bit confused as to why I really needed an int_fact_order as my fact_orders was a select * from int-fact_orders, but i created an int_fact_orders anyway.
+    - I added dim_users which included the users' address and full name both from int_users. I also added fact_orders which pulled from int_fact_orders. This was the biggest model as it combined data from most of the source tables. I was a a bit confused as to why I really needed an int_fact_order as my fact_orders was a select * from int-fact_orders, but i created an int_fact_orders anyway. I also added a dim_products which gave ma a product_in_stock value which I could test against if < 10.
 
 * Use the dbt docs to visualize your model DAGs to ensure the model layers make sense
     
@@ -33,7 +33,7 @@ Week 2 answers;
 
     * I'm assuming there can be no duplicates for user_id in my dim_users. I added a bespoke test to make sure. I also added a bespoke test to make sure there were no order_costs < 1, which i assume would be a red flag if there were. I added a generic tests to make sure that ethere weren't any null order_ids, or unacceptable prmo_ids.
 
-    -Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests? None found, but I imagine if I had time to create more test i would find some.
+    -Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests? None found, I thought I might w/ my product_in_stock_less_than_1- bespoke test, but I didn't, altough i did find some w/ < 50 in stock,  but don't think that is aproblem for plants??
 
     -Apply these changes to your github repo
 
