@@ -1,0 +1,15 @@
+
+version: 2
+
+models:
+  
+  - name: dim_products
+    description: "product dimension"
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+      - name: promo_id
+        tests:
+          - accepted_values:
+              values: ['task-force', 'instruction set', 'leverage', 'Optional', 'Mandatory', 'Digitized']
