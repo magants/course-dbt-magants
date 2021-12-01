@@ -1,8 +1,8 @@
 SELECT
-    full_name,
-    COUNT(1) as num_orders
-FROM dbt_magants.dim_users
-JOIN dbt_magants.fact_orders
-        USING (full_name)
-GROUP BY full_name
-ORDER BY num_orders desc
+    session_id,
+        {% FOR event_type IN event_types %}
+        count(CASE WHEN event_type = '{{event_type}}' THEN 1 END) as {{event_type}}_count,
+        {% ENDFOR %}
+
+    FROM {{ ref('stg_events') }}
+    GROUP BY 1
