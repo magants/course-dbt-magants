@@ -4,14 +4,18 @@
     )
 }}
 
-{% set event_types = ["add_to_cart", "checkout", "page_view", "delete_from_cart", "account_created", "package_shipped"] %}
+{%
+    set event_types = ['add_to_cart','checkout','page_view','delete_from_cart','account_created','package_shipped']
+%}
 
 
-    SELECT
+    select
     session_id,
-        {% FOR event_type IN event_types %}
-        count(CASE WHEN event_type = '{{event_type}}' THEN 1 END) as {{event_type}}_count,
-        {% ENDFOR %}
+    created_at,
+    user_id
+    {% for event_type in event_types %},
+    sum(CASE WHEN event_type = '{{event_type}}' THEN 1 ELSE 0 END) as {{event_type}}_count
+    {% endfor %}
 
     FROM {{ ref('stg_events') }}
-    GROUP BY 1
+    GROUP BY 1,2,3
