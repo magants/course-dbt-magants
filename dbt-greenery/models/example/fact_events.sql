@@ -8,7 +8,6 @@
     set event_types = ['add_to_cart','checkout','page_view','delete_from_cart','account_created','package_shipped']
 %}
 
-
     select
     session_id,
     created_at,
