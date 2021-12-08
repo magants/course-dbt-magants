@@ -1,2 +1,7 @@
 
 version: 2
+
+models:
+  - name: sum_if_macro
+    description: "ramnathv's macro from week 3 lesson used to sum if column value is true"
+    
