@@ -1,1 +1,1 @@
-CREATE ROLE reporting
+select * from dbt_magants.stg_events
