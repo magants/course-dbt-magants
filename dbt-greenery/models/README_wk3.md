@@ -6,4 +6,4 @@ Week 2 answers;
 
 * What is our user conversion rate by product?
 
-    - 
+    - select * from dbt_magants.fact_conversion_by_product

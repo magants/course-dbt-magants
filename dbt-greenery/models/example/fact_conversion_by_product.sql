@@ -8,10 +8,10 @@ WITH
         FROM {{ref('stg_events')}}
         GROUP BY session_id
 )
-, sessions_with_produt AS (
+, sessions_with_product AS (
     SELECT
         session_id,
-        split_part(page_url, '/', 5) as product_id,
+        split_part(page_url, '/', 5) as product_id
     FROM {{ref('stg_events')}}
     WHERE event_type='add_to_cart'
     GROUP BY session_id, product_id

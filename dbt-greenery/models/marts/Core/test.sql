@@ -1,1 +1,1 @@
-select * from dbt_magants.fct_conversion_rate
+select * from dbt_magants.fact_conversion_by_product
